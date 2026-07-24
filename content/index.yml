@@ -1,121 +1,112 @@
 seo:
-  title: "LEAD Engineering Consulting"
-  description: "Welcome to LEAD Engineering Consulting. We specialize in creating innovative engineering solutions that drive success."
-title: "Ne jemi LEAD Engineering Consulting"
-description: "Mirë se vini në LEAD Engineering Consulting. Ne specializohemi në krijimin e zgjidhjeve inovative inxhinierike që nxisin suksesin."
+  title: "LEAD Consulting | Projektim, Mbikëqyrje dhe Kolaudim Inxhinierik"
+  description: "LEAD Consulting është kompani inxhinierike multidisiplinare në Shqipëri e specializuar në infrastrukturë, energji të rinovueshme, kolaudim dhe zhvillim urban."
+title: "Ne jemi LEAD Consulting"
+description: "Mirë se vini në LEAD Consulting. Ne udhëheqim zhvillimin e veprave publike dhe private duke ofruar zgjidhje të plota inxhinierike, mbikëqyrje rigoroze dhe kolaudim të standardeve më të larta teknike."
 hero:
   links:
-    - label: "Projects"
+    - label: "Shiko Projektet"
       to: projects
       color: "neutral"
   images:
-    - src: /foto/1.webp
-      alt: Random Image 1
-    - src: /foto/2.webp
-      alt: Random Image 2
-    - src: /foto/3.webp
-      alt: Random Image 3
-    - src: /foto/4.webp
-      alt: Random Image 4
-    - src: /foto/5.webp
-      alt: Random Image 5
-    - src: /foto/6.webp
-      alt: Random Image 6
-    - src: /foto/7.webp
-      alt: Random Image 7
-    - src: /foto/8.webp
-      alt: Random Image 8
-    - src: /foto/9.webp
-      alt: Random Image 9
+    - src: /foto/10webp
+      alt: Projektim dhe infrastrukture urbane LEAD Consulting
+    - src: /foto/11.webp
+      alt: Mbikëqyrje e punimeve në kantier nga inxhinierët e LEAD
+    - src: /foto/12.webp
+      alt: Parqe fotovoltaike dhe energji e rinovueshme në Shqipëri
+    - src: /foto/13.webp
+      alt: Kolaudim i objekteve me rëndësi strategjike
+    - src: /foto/14.webp
+      alt: Zhvillim i qëndrueshëm dhe arkitekturë peizazhi
+    - src: /foto/15.webp
+      alt: Projektimi i ballkoneve panoramike dhe turizmit natyror
+    - src: /foto/16.webp
+      alt: Rrjete inxhinierike, ujësjellës dhe kanalizime
+    - src: /foto/17.webp
+      alt: Ndërtimi i shkollave dhe rikualifikimi urban i lagjeve
+    - src: /foto/18.webp
+      alt: Konsulencë teknike për vepra civile dhe ushtarake
 
 about:
-  title: "About Me"
+  title: "Rreth LEAD Consulting"
   description: |
-    As a UX/UI designer and front-end developer with 6 years of experience, I leverage my Boston University Interactive Design degree to craft user-centered digital experiences.
-    My approach blends creative strategy with technical expertise, transforming concepts into functional, purposeful digital products that seamlessly integrate design and technology.
+    LEAD Consulting është një entitet i profilizuar në inxhinieri, konsulencë teknike dhe zhvillim territorial. Të vepruarit si një palë e tretë e pavarur na lejon të garantojmë saktësi absolute në kolaudimin e projekteve dhe mbikëqyrjen e ndërtimit.
+    Qasja jonë integron rregulloret strikte teknike (KTP & KTZ) me inovacionin, duke u fokusuar veçanërisht në infrastrukturën publike, energjinë diellore dhe zgjidhjet e qëndrueshme urbane. Ne e transformojmë vizionin e klientëve në struktura të sigurta dhe afatgjata.
 experience:
-  title: Work Experience
+  title: Ekspertiza Inxhinierike
   items:
-    - position: "Brand Designer at"
+    - position: "Projektim & Konsulencë"
       date: "2023 - Present"
       company:
-        name: Nuxt
-        logo: "i-simple-icons-nuxtdotjs"
-        url: "https://nuxt.com"
-        color: "#00DC82"
-    - position: "Assets Designer at"
-      date: "2022 - 2023"
+        name: Impiante Fotovoltaike
+        logo: "i-lucide-solar-panel"
+        url: "/projects"
+        color: "#187A43"
+    - position: "Mbikëqyrje & Kolaudim"
+      date: "Vepra Civile dhe Strategjike"
       company:
-        name: Raycast
-        logo: "i-simple-icons-raycast"
-        url: "https://raycast.com"
-        color: "#FF6363"
-    - position: "Senior UX/UI Designer at"
-      date: "2020 - 2021"
+        name: "Infrastrukturë & Institucione"
+        logo: "i-lucide-building"
+        url: "/projects"
+        color: "#334155"
+    - position: "Projektim dhe Planifikim"
+      date: "Rikualifikim i Hapësirave"
       company:
-        name: Linear
-        logo: "i-simple-icons-linear"
-        url: "https://linear.app"
-        color: "#5E6AD2"
+        name: "Infrastrukturë Urbane"
+        logo: "i-lucide-map"
+        url: "/projects"
+        color: "#283C33"
 testimonials:
-  - quote: "Emma's approach to UX design completely transformed our product. She has a rare ability to balance beautiful aesthetics with functional simplicity. The redesign not only looked better, but it reduced our customer support tickets by 40% and increased conversion rates across all key metrics."
+  - quote: "LEAD Consulting menaxhoi me sukses kolaudimin e një prej projekteve më komplekse strategjike në Shqipëri. Profesionalizmi i tyre, përpikmëria në zbatimin e rregulloreve teknike dhe qëndrimi i pavarur i bëjnë ata partnerin ideal për investime madhore."
     author:
-      name: 'Sarah Chen'
-      description: 'Product Director at Bloom Finance'
+      name: 'Përfaqësues Zbatues'
+      description: 'Projekti i Bazës Ajrore të NATO-s, Kuçovë'
       avatar:
-        src: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
-        srcset: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
-  - quote: "Working with Emma was the best decision we made for our startup. She didn't just deliver designs—she challenged our assumptions, conducted thorough user research, and created an experience that truly resonated with our audience. Her technical knowledge of front-end development meant the handoff to our engineering team was seamless."
+        src: '/images/avatars/nato-project.webp'
+        srcset: '/images/avatars/nato-project.webp 2x'
+  - quote: "Ekspertiza e LEAD në projektimin e parkut tonë fotovoltaik ishte jetësore. Ata nuk ofruan vetëm vizatime teknike, por një plan të plotë për efiçencën energjetike dhe përshtatjen me mjedisin lokal. Rekomandim maksimal për sektorin e energjisë së gjelbër."
     author:
-      name: 'Michael Rodriguez'
-      description: 'Co-founder of Wavelength Music'
+      name: 'Investitor'
+      description: 'Parku Fotovoltaik Spitallë Solar (100 MW)'
       avatar:
-        src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
-        srcset: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
-  - quote: "Emma stands out in her ability to translate complex sustainability data into intuitive interfaces. Her work on EcoTrack wasn't just visually stunning—it fundamentally changed how our users interact with environmental information. She approaches each problem with both creativity and analytical rigor, which is exactly what we needed."
+        src: '/images/avatars/spitalla-solar.webp'
+        srcset: '/images/avatars/spitalla-solar.webp 2x'
+  - quote: "Ndërhyrjet urbanistike që realizoi LEAD Consulting në lagjen tonë zgjidhën problemet shumëvjeçare të infrastrukturës rrugore dhe atë të kanalizimeve. Vëmendja e tyre ndaj gjelbërimit dhe hapësirave rekreative i ka dhënë një frymë të re komunitetit."
     author:
-      name: 'Dr. Aisha Johnson'
-      description: 'Chief Innovation Officer at GreenTech Solutions'
+      name: 'Përfaqësues Vendor'
+      description: 'Projekti i Rikualifikimit Urban, Patos'
       avatar:
-        src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
-        srcset: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
+        src: '/images/avatars/patos-project.webp'
+        srcset: '/images/avatars/patos-project.webp 2x'
 blog:
-  title: "Latest Articles"
-  description: "Some of my recent thoughts"
+  title: "Lajme dhe Publikime"
+  description: "Të rejat më të fundit nga kantieret dhe inovacionet inxhinierike."
 faq:
-  title: Frequently Asked Questions
-  description: Answers to common questions about my process and services.
+  title: "Pyetjet më të Shpeshta (FAQ)"
+  description: "Informacione shtesë mbi procedurat, standardet dhe shërbimet e ofruara nga kompania jonë."
   categories:
-    - title: Services & Process
+    - title: Shërbimet dhe Ekspertiza
       questions:
-        - label: What services do you offer?
+        - label: Cilat janë shërbimet kryesore që ofroni?
           content: |
-            I specialize in UX/UI design and front-end development. This includes user research, wireframing, interactive prototyping, creating intuitive user interfaces, building responsive websites and web applications (especially with Vue.js/Nuxt.js), and developing design systems. My goal is to create seamless digital experiences from concept to deployment.
-        - label: What is your design process like?
+            LEAD Consulting ofron një paketë të plotë shërbimesh inxhinierike. Kjo përfshin: projektimin e infrastrukturës rrugore dhe urbane, inxhinieri për parqe fotovoltaike, mbikëqyrje rigoroze të kantiereve të ndërtimit, si dhe kolaudimin ligjor të veprave publike, ushtarake dhe atyre civile.
+        - label: A funksiononi ju si një palë e tretë e pavarur?
           content: |
-            My process is collaborative and iterative, typically involving stages like Discovery & Research, Ideation & Prototyping, User Testing, Visual Design, and close collaboration with development teams during implementation. I tailor the process based on project needs, always focusing on user-centered solutions.
-        - label: Do you work with startups?
+            Po. Integriteti profesional është thelbi ynë. Në proceset e mbikëqyrjes dhe kolaudimit, ne veprojmë si një ent i pavarur, duke garantuar që çdo vepër zbatohet saktësisht sipas projekteve, standardeve të ndërtimit (KTP/KTZ) dhe specifikimeve të investitorit pa konflikt interesi.
+        - label: Në cilat fusha të inxhinierisë specializoheni më tepër?
           content: |
-            Absolutely! I enjoy working with startups to help shape their product vision and create user-friendly interfaces from the ground up. I can adapt my process to fit the fast-paced startup environment.
-    - title: Pricing & Timelines
+            Ekspertiza jonë kryesore shtrihet në zhvillimin e rrjeteve inxhinierike (MEPS, ujësjellës, kanalizime KUZ/KUSH), planifikimin urban për rikualifikime zonash, menaxhimin e aseteve ekoturistike dhe inxhinierinë mjedisore për prodhimin e energjisë së rinovueshme.
+    - title: Procedura dhe Kontraktimi
       questions:
-        - label: How much does a project typically cost?
+        - label: Me çfarë lloj investitorësh bashkëpunoni?
           content: |
-            Project costs vary based on scope, complexity, features, and timeline. For comprehensive UX/UI design and front-end development projects, my engagements typically start around $5,000, with average projects ranging between $8,000 and $25,000. For consulting or specific design tasks, my day rate is $700.
-        - label: What are your payment terms?
+            Ne kemi një portofol të dëshmuar suksesi si me institucione ndërkombëtare (p.sh. NSPA/NATO), me autoritete shtetërore e bashki (për ndërtime shkollash dhe sheshesh), ashtu edhe me investitorë të mëdhenj privatë (për industri dhe impiante diellore).
+        - label: A merreni me projekte në të gjithë territorin e Shqipërisë?
           content: |
-            I generally require a 40% deposit to schedule the project and begin work, with the remaining 60% due upon successful project completion and delivery. I accept payments via bank transfer and Stripe.
-        - label: How long does a typical project take?
-          content: |
-            Timelines depend heavily on the project's scope and complexity. Smaller projects might take 3-4 weeks, while larger, more involved projects can range from 2 to 4 months. I always provide a detailed timeline estimate after the initial discovery phase.
-        - label: Do you offer retainers or ongoing support?
-          content: |
-            Yes, for clients needing ongoing design support, feature development, or maintenance, I offer monthly retainer options tailored to specific needs. Let's discuss if this is something you're interested in.
-    - title: About Me
+            Po, ashtu siç tregojnë projektet tona nga Përmeti në Spitallë (Durrës) e deri në Kuçovë, skuadra jonë ka kapacitetin logjistik dhe teknik për të dizenjuar, mbikëqyrur dhe operuar kantiere kudo në territorin e Republikës së Shqipërisë.
+    - title: Rreth Qasjes Sonë
       questions:
-        - label: What do you enjoy most about your work?
+        - label: Çfarë nënkuptoni me "Zhvillim të Qëndrueshëm"?
           content: |
-            I love the challenge of solving complex problems through design and technology. It's incredibly rewarding to see people interact with something I've created and find it genuinely useful and easy to navigate. Bridging the gap between user needs and technical possibilities is what truly excites me.
-        - label: What are your hobbies outside of work?
-          content: |
-            When I'm not designing or coding, I enjoy exploring Boston's neighborhoods, trying out new coffee shops, and hiking in the nearby reservations. I'm also passionate about photography and occasionally contribute to open-source projects.
+            Për ne, çdo ndërhyrje teknike duhet të respektojë komunitetin dhe natyrën. Kjo reflektohet në dizenjimin masiv të parqeve fotovoltaike për energji të pastër, si dhe në projektet turistike që mbrojnë trashëgiminë natyrore pa cenuar peizazhin ekzistues.

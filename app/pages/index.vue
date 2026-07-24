@@ -11,21 +11,21 @@ if (!page.value) {
 }
 
 useSeoMeta({
-  title: page.value?.seo.title || page.value?.title,
-  ogTitle: page.value?.seo.title || page.value?.title,
-  description: page.value?.seo.description || page.value?.description,
-  ogDescription: page.value?.seo.description || page.value?.description,
+  title: page.value?.seo?.title || page.value?.title,
+  ogTitle: page.value?.seo?.title || page.value?.title,
+  description: page.value?.seo?.description || page.value?.description,
+  ogDescription: page.value?.seo?.description || page.value?.description,
   ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/portfolio-light.png'
 })
 </script>
 
 <template>
   <UPage v-if="page">
-    <IndexCarousel :page/>
+    <IndexCarousel :page="page" />
     <LandingHero :page />
     <UPageSection
       :ui="{
-        container: 'pt-0! lg:grid lg:grid-cols-2 lg:gap-8'
+        container: 'pt-0! lg:grid lg:grid-cols-1 lg:gap-8'
       }"
     >
       <LandingAbout :page="page" />

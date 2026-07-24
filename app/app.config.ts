@@ -21,28 +21,32 @@ export default defineAppConfig({
       slots: {
         container: 'py-18 sm:py-24 lg:py-32',
         title: 'mx-auto max-w-xl text-pretty text-3xl sm:text-4xl lg:text-5xl',
-        description: 'mt-2 text-md mx-auto max-w-2xl text-pretty sm:text-md text-muted'
+        description:
+          'mt-2 text-md mx-auto max-w-2xl text-pretty sm:text-md text-muted'
       }
     }
   },
   footer: {
-    credits: `Built with Nuxt UI • © ${new Date().getFullYear()}`,
+    credits: `Të gjitha të drejtat e rezervuara Lead • © ${new Date().getFullYear()}`,
     colorMode: false,
-    links: [{
-      'icon': 'i-simple-icons-discord',
-      'to': 'https://go.nuxt.com/discord',
-      'target': '_blank',
-      'aria-label': 'Nuxt on Discord'
-    }, {
-      'icon': 'i-simple-icons-x',
-      'to': 'https://go.nuxt.com/x',
-      'target': '_blank',
-      'aria-label': 'Nuxt on X'
-    }, {
-      'icon': 'i-simple-icons-github',
-      'to': 'https://github.com/nuxt/ui',
-      'target': '_blank',
-      'aria-label': 'Nuxt UI on GitHub'
-    }]
+    links: [
+      {
+        'icon': 'i-simple-icons-facebook',
+        'to': 'https://www.facebook.com/ardit.ing.7/',
+        'target': '_blank',
+        'aria-label': 'Lead on Facebook'
+      }
+    ]
+  },
+  carousel: {
+    items: [
+      '/foto/1.webp',
+      '/foto/2.webp',
+      '/foto/3.webp',
+      '/foto/4.webp',
+      '/foto/5.webp',
+      '/foto/6.webp',
+      '/foto/7.webp'
+    ]
   }
 })

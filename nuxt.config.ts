@@ -32,6 +32,16 @@ export default defineNuxtConfig({
       crawlLinks: true
     }
   },
+  vite: {
+    optimizeDeps: {
+      include: [
+        '@headlessui/vue',
+        '@heroicons/vue/24/outline',
+        '@vue/devtools-core',
+        '@vue/devtools-kit'
+      ]
+    }
+  },
 
   eslint: {
     config: {
@@ -45,4 +55,5 @@ export default defineNuxtConfig({
   ogImage: {
     zeroRuntime: true
   }
+
 })

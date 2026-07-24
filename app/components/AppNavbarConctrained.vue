@@ -5,7 +5,7 @@
       aria-label="Global"
     >
       <div class="flex lg:flex-1">
-        <a
+        <NuxtLink
           href="/"
           class="-m-1.5 p-1.5"
         >
@@ -20,7 +20,7 @@
             src="/img/Logo_lead_D.svg"
             alt=""
           >
-        </a>
+        </NuxtLink>
       </div>
       <div class="flex lg:hidden">
         <button
@@ -38,7 +38,7 @@
       <div class="hidden lg:flex lg:gap-x-12">
         <ul class="flex gap-x-6 text-sm/6 font-semibold leading-6 text-gray-900 dark:text-white">
           <template
-            v-for="item in navigation"
+            v-for="item in navLinks[0]"
             :key="item.name"
           >
             <li>
@@ -184,7 +184,7 @@
           <div class="-my-6 divide-y divide-gray-500/10 dark:divide-white/10">
             <div class="space-y-2 py-6">
               <a
-                v-for="item in navigation"
+                v-for="item in navLinks"
                 :key="item.name"
                 :href="item.href"
                 class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5"
@@ -207,105 +207,6 @@
 import { ref } from 'vue'
 import { Dialog, DialogPanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
-
-const navigation = [
-
-  { children: true,
-    name: 'Kompania',
-    href: '/kompania',
-    children: [
-      {
-        name: 'Rreth nesh',
-        description: 'Get a better understanding of your traffic',
-        href: '#',
-        icon: 'i-lucide-info'
-      },
-      {
-        name: 'Teams',
-        description: 'Speak directly to your customers',
-        href: '#',
-        icon: 'i-lucide-users'
-      },
-      {
-        name: 'Missioni',
-        description: 'Your customers\' data will be safe and secure',
-        href: '#',
-        icon: 'i-lucide-target' }
-    ] },
-  {
-    children: true,
-    name: 'Sherbime',
-    href: '/sherbime',
-    children: [
-      {
-        name: 'Projektim Arkitektonik',
-        description: 'Get a better understanding of your traffic',
-        href: '#',
-        icon: 'i-lucide-building'
-      },
-      {
-        name: 'Projektim inxhinierik',
-        description: 'Speak directly to your customers',
-        href: '#',
-        icon: 'i-lucide-settings'
-      },
-      {
-        name: 'Mbikqyrje punimesh',
-        description: 'Your customers\' data will be safe and secure',
-        href: '#',
-        icon: 'i-lucide-shield-check'
-      },
-      {
-        name: 'Kolaudim',
-        description: 'Connect with third-party tools',
-        href: '#',
-        icon: 'i-lucide-clipboard-check'
-      },
-      {
-        name: 'Kontrolli i cilsisë',
-        description: 'Build strategic funnels that will convert',
-        href: '#',
-        icon: 'i-lucide-chart-line'
-      }
-    ] },
-  {
-    children: true,
-    name: 'Projekte',
-    href: '/projekte',
-    children: [
-      {
-        name: 'Projektim Arkitektonik',
-        description: 'Get a better understanding of your traffic',
-        href: '#',
-        icon: 'i-lucide-building'
-      },
-      {
-        name: 'Projektim inxhinierik',
-        description: 'Speak directly to your customers',
-        href: '#',
-        icon: 'i-lucide-settings'
-      },
-      {
-        name: 'Mbikqyrje punimesh',
-        description: 'Your customers\' data will be safe and secure',
-        href: '#',
-        icon: 'i-lucide-shield-check'
-      },
-      {
-        name: 'Kolaudim',
-        description: 'Connect with third-party tools',
-        href: '#',
-        icon: 'i-lucide-clipboard-check'
-      },
-      {
-        name: 'Kontrolli i cilsisë',
-        description: 'Build strategic funnels that will convert',
-        href: '#',
-        icon: 'i-lucide-chart-line'
-      }
-    ] },
-  { name: 'Kontakt', href: '/kontakt' }
-]
 
 const mobileMenuOpen = ref(false)
 </script>

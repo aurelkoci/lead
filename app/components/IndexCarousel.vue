@@ -1,13 +1,6 @@
 <script setup lang="ts">
-const items = [
-  '/foto/1.webp',
-  '/foto/2.webp',
-  '/foto/3.webp',
-  '/foto/4.webp',
-  '/foto/5.webp',
-  '/foto/6.webp',
-  '/foto/7.webp'
-]
+const { carousel } = useAppConfig()
+const items = carousel.items
 </script>
 
 <template>

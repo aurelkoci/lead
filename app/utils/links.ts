@@ -3,59 +3,105 @@ import type { NavigationMenuItem } from '@nuxt/ui'
 export const navLinks: NavigationMenuItem[] = [
   [
     {
-      label: 'Projects',
-      icon: 'i-lucide-folder',
-      to: '/projects'
-    },
-    {
-      label: 'Kompania',
-      icon: 'i-lucide-building',
-      to: '/company',
+
+      name: 'Kompania',
+      href: '/kompania',
       children: [
         {
-          label: 'About',
-          icon: 'i-lucide-info',
-          to: '/about'
+          name: 'Rreth nesh',
+          description: 'Get a better understanding of your traffic',
+          href: '#',
+          icon: 'i-lucide-info'
         },
         {
-          label: 'Teams',
-          icon: 'i-lucide-users',
-          to: '/teams'
+          name: 'Teams',
+          description: 'Speak directly to your customers',
+          href: '#',
+          icon: 'i-lucide-users'
         },
         {
-          label: 'Mision & Vision',
-          icon: 'i-lucide-eye',
-          to: '/mission-vision'
+          name: 'Missioni',
+          description: 'Your customers\' data will be safe and secure',
+          href: '#',
+          icon: 'i-lucide-target'
         }
       ]
     },
     {
-      label: 'Shërbimet',
-      icon: 'i-lucide-briefcase',
-      to: '/services',
+
+      name: 'Sherbime',
+      href: '/sherbime',
       children: [
         {
-          label: 'Arkitekturë dhe projektim',
-          icon: 'i-lucide-clipboard',
-          to: '/services/consulting'
+          name: 'Projektim Arkitektonik',
+          description: 'Get a better understanding of your traffic',
+          href: '#',
+          icon: 'i-lucide-building'
         },
         {
-          label: 'Projektim Inxhinierik',
-          icon: 'i-lucide-paintbrush',
-          to: '/services/design'
+          name: 'Projektim inxhinierik',
+          description: 'Speak directly to your customers',
+          href: '#',
+          icon: 'i-lucide-settings'
         },
         {
-          label: 'Mbikqyrje punimesh dhe kontroll cilësie',
-          icon: 'i-lucide-code',
-          to: '/services/development'
+          name: 'Mbikqyrje punimesh',
+          description: 'Your customers\' data will be safe and secure',
+          href: '#',
+          icon: 'i-lucide-shield-check'
+        },
+        {
+          name: 'Kolaudim',
+          description: 'Connect with third-party tools',
+          href: '#',
+          icon: 'i-lucide-clipboard-check'
+        },
+        {
+          name: 'Kontrolli i cilsisë',
+          description: 'Build strategic funnels that will convert',
+          href: '#',
+          icon: 'i-lucide-chart-line'
         }
       ]
     },
     {
-      label: 'About',
-      icon: 'i-lucide-user',
-      to: '/about'
-    }
+
+      name: 'Projekte',
+      href: '/projekte',
+      children: [
+        {
+          name: 'Projektim Arkitektonik',
+          description: 'Get a better understanding of your traffic',
+          href: '#',
+          icon: 'i-lucide-building'
+        },
+        {
+          name: 'Projektim inxhinierik',
+          description: 'Speak directly to your customers',
+          href: '#',
+          icon: 'i-lucide-settings'
+        },
+        {
+          name: 'Mbikqyrje punimesh',
+          description: 'Your customers\' data will be safe and secure',
+          href: '#',
+          icon: 'i-lucide-shield-check'
+        },
+        {
+          name: 'Kolaudim',
+          description: 'Connect with third-party tools',
+          href: '#',
+          icon: 'i-lucide-clipboard-check'
+        },
+        {
+          name: 'Kontrolli i cilsisë',
+          description: 'Build strategic funnels that will convert',
+          href: '#',
+          icon: 'i-lucide-chart-line'
+        }
+      ]
+    },
+    { name: 'Kontakt', href: '/kontakt' }
   ],
   [
     {
