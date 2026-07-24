@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+@import "./inter.css";
+
+@source "../../../content/**/*";
+
+@theme static {
+  --font-sans: InterVariable, sans-serif;
+  --font-sans--font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+:root {
+  --ui-container: var(--container-6xl);
+
+  ::selection {
+    color: #282a30;
+    background-color: #c8c8c8;
+  }
+}
+
+.dark {
+  ::selection {
+    color: #ffffff;
+    background-color: #474747;
+  }
+}
