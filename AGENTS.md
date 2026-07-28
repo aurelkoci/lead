@@ -70,17 +70,17 @@ Nuxt Content v3 relies on collection definitions configured in [content.config.t
 
 Always use standard `pnpm` workspace scripts to handle setup, checks, and builds.
 
-- **Start Dev Server**: `pnpm dev`
-- **Build / Prerender Production**: `pnpm build`
-- **Preview Production Build**: `pnpm preview`
-- **TypeScript Typecheck**: `pnpm typecheck`
-- **Run Linter Checks**: `pnpm lint`
-- **Automatically Fix Linter Issues**: `pnpm lint:fix`
+- **Start Dev Server**: `bun  dev`
+- **Build / Prerender Production**: `bun build`
+- **Preview Production Build**: `bun preview`
+- **TypeScript Typecheck**: `bun typecheck`
+- **Run Linter Checks**: `bun lint`
+- **Automatically Fix Linter Issues**: `bun lint:fix`
 
 ---
 
 ## 6. Guardrails & Key Pitfalls
 
-1. **Schema Violations**: When editing any YAML or Markdown files under [content/](content/), verify that all fields perfectly match schemas defined in [content.config.ts](content.config.ts). Run `pnpm dev` or `pnpm build` to let Nuxt generate type helpers.
-2. **ESLint Rules**: ESLint Flat Config is enforced in [eslint.config.mjs](eslint.config.mjs). If compile errors occur, run `pnpm lint:fix` to resolve formatting discrepancies. Note that `@typescript-eslint/no-explicit-any` rules are turned off.
+1. **Schema Violations**: When editing any YAML or Markdown files under [content/](content/), verify that all fields perfectly match schemas defined in [content.config.ts](content.config.ts). Run `bun dev` or `bun build` to let Nuxt generate type helpers.
+2. **ESLint Rules**: ESLint Flat Config is enforced in [eslint.config.mjs](eslint.config.mjs). If compile errors occur, run `bun lint:fix` to resolve formatting discrepancies. Note that `@typescript-eslint/no-explicit-any` rules are turned off.
 3. **Paths Rule**: Avoid hardcoding static files, routes, or assets without checking directories and their aliases (e.g., `~/assets/` is mapped correctly inside [app/](app/)).

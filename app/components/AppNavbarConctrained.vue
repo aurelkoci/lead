@@ -1,12 +1,14 @@
 <template>
-  <header class="w-full max-w-(--ui-container) fixed top-2 sm:top-4 mx-auto left-1/2 transform -translate-x-1/2 z-10 bg-muted/80 backdrop-blur-sm rounded-full px-2 sm:px-4 border border-muted/50 shadow-lg shadow-neutral-950/5">
+  <header
+    class="w-full max-w-(--ui-container) fixed top-2 sm:top-4 mx-auto left-1/2 transform -translate-x-1/2 z-10 bg-muted/80 backdrop-blur-sm rounded-full px-2 sm:px-4 border border-muted/50 shadow-lg shadow-neutral-950/5"
+  >
     <nav
       class="mx-auto flex items-center justify-between p-2 lg:px-8"
       aria-label="Global"
     >
       <div class="flex lg:flex-1">
         <NuxtLink
-          href="/"
+          to="/"
           class="-m-1.5 p-1.5"
         >
           <span class="sr-only">Lead</span>
@@ -39,14 +41,15 @@
         <ul class="flex gap-x-6 text-sm/6 font-semibold leading-6 text-gray-900 dark:text-white">
           <template
             v-for="item in navLinks[0]"
-            :key="item.name"
+            :key="item.label"
           >
             <li>
-              <a
+              <NuxtLink
                 v-if="!item.children"
-                :href="item.href"
+                :to="item.to"
                 class="text-sm/6 font-semibold text-gray-900 transition-colors hover:text-[#187A43] dark:text-white dark:hover:text-[#187A43]"
-              >{{ item.name }}</a>
+              >
+                {{ item.label }}</NuxtLink>
               <AppNavbarPopover
                 v-else
                 :item="item"
@@ -66,7 +69,9 @@
       @close="mobileMenuOpen = false"
     >
       <div class="fixed inset-0 z-50" />
-      <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:bg-gray-900 dark:sm:ring-gray-100/10">
+      <DialogPanel
+        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:bg-gray-900 dark:sm:ring-gray-100/10"
+      >
         <div class="flex items-center justify-between">
           <NuxtLink
             to="/"
@@ -107,7 +112,7 @@
             <div class="space-y-2 py-6">
               <template
                 v-for="item in navLinks[0]"
-                :key="item.name"
+                :key="item.label"
               >
                 <NuxtLink
                   v-if="!item.children"
@@ -115,7 +120,7 @@
                   class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 transition-colors hover:bg-[#187A43]/10 hover:text-[#187A43] dark:text-white dark:hover:bg-[#187A43]/20 dark:hover:text-[#187A43]"
                   @click="mobileMenuOpen = false"
                 >
-                  {{ item.name }}
+                  {{ item.label }}
                 </NuxtLink>
 
                 <Disclosure
@@ -124,8 +129,10 @@
                   as="div"
                   class="-mx-3"
                 >
-                  <DisclosureButton class="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-base/7 font-semibold text-gray-900 transition-colors hover:bg-[#187A43]/10 hover:text-[#187A43] dark:text-white dark:hover:bg-[#187A43]/20 dark:hover:text-[#187A43]">
-                    <span>{{ item.name }}</span>
+                  <DisclosureButton
+                    class="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-base/7 font-semibold text-gray-900 transition-colors hover:bg-[#187A43]/10 hover:text-[#187A43] dark:text-white dark:hover:bg-[#187A43]/20 dark:hover:text-[#187A43]"
+                  >
+                    <span>{{ item.label }}</span>
                     <UIcon
                       name="i-lucide-chevron-down"
                       class="size-4 transition-transform"
@@ -136,7 +143,7 @@
                   <DisclosurePanel class="mt-1 space-y-1 pl-3">
                     <NuxtLink
                       v-for="child in item.children"
-                      :key="child.name"
+                      :key="child.label"
                       :to="child.to"
                       class="flex gap-x-3 rounded-lg px-3 py-2 transition-colors hover:bg-[#187A43]/10 dark:hover:bg-[#187A43]/20"
                       @click="mobileMenuOpen = false"
@@ -148,7 +155,7 @@
                       />
                       <div>
                         <p class="text-sm font-semibold text-gray-900 dark:text-white">
-                          {{ child.name }}
+                          {{ child.label }}
                         </p>
                       </div>
                     </NuxtLink>
@@ -160,31 +167,18 @@
         </div>
       </DialogPanel>
     </Dialog>
+    <UBreadcrumb
+      class="absolute top-20 sm:top-24 z-10"
+      :items="breadcrumbItems"
+    />
   </header>
-
-  <UBreadcrumb
-    color="secondary"
-    :items="navLinks"
-  />
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import { Dialog, DialogPanel, Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
-import { navLinks as sourceNavLinks } from '~/utils/links'
 
 const mobileMenuOpen = ref(false)
-
-// Keep desktop code unchanged by exposing href from to
-const navLinks = sourceNavLinks.map(group =>
-  group.map(item => ({
-    ...item,
-    href: item.to,
-    children: item.children?.map(child => ({
-      ...child,
-      href: child.to
-    }))
-  }))
-)
+const breadcrumbItems = useBreadcrumbItems()
 </script>

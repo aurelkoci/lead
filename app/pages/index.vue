@@ -17,6 +17,8 @@ useSeoMeta({
   ogDescription: page.value?.seo?.description || page.value?.description,
   ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/portfolio-light.png'
 })
+
+console.log('page', page.value)
 </script>
 
 <template>
