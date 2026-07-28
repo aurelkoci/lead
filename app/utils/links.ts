@@ -3,114 +3,82 @@ import type { NavigationMenuItem } from '@nuxt/ui'
 export const navLinks: NavigationMenuItem[] = [
   [
     {
-
       name: 'Kompania',
       href: '/kompania',
       children: [
         {
           name: 'Rreth nesh',
-          description: 'Get a better understanding of your traffic',
-          href: '#',
+          description: 'Zbuloni historikun, vlerat dhe qasjen tonë profesionale në fushën e inxhinierisë.',
+          href: '/kompania/rreth-nesh',
           icon: 'i-lucide-info'
         },
         {
-          name: 'Teams',
-          description: 'Speak directly to your customers',
-          href: '#',
+          name: 'Ekipet',
+          description: 'Njihuni me inxhinierët dhe ekspertët tanë multidisiplinarë.',
+          href: '/kompania/ekipi',
           icon: 'i-lucide-users'
         },
         {
-          name: 'Missioni',
-          description: 'Your customers\' data will be safe and secure',
-          href: '#',
+          name: 'Misioni',
+          description: 'Vizioni ynë për zhvillim të qëndrueshëm dhe struktura afatgjata.',
+          href: '/kompania/misioni',
           icon: 'i-lucide-target'
         }
       ]
     },
     {
-
-      name: 'Sherbime',
+      name: 'Shërbime',
       href: '/sherbime',
       children: [
         {
           name: 'Projektim Arkitektonik',
-          description: 'Get a better understanding of your traffic',
-          href: '#',
-          icon: 'i-lucide-building'
+          description: 'Studim dhe projektim urban e arkitektonik për objekte civile, industriale dhe publike.',
+          href: '/sherbime/arkitekture',
+          icon: 'i-lucide-building-2'
         },
         {
-          name: 'Projektim inxhinierik',
-          description: 'Speak directly to your customers',
-          href: '#',
-          icon: 'i-lucide-settings'
+          name: 'Projektim Inxhinierik',
+          description: 'Projektime konstruktive, instalatore, hidraulike, rrugore dhe topografike.',
+          href: '/sherbime/inxhinieri',
+          icon: 'i-lucide-hard-hat'
         },
         {
-          name: 'Mbikqyrje punimesh',
-          description: 'Your customers\' data will be safe and secure',
-          href: '#',
-          icon: 'i-lucide-shield-check'
+          name: 'Mbikëqyrje Punimesh',
+          description: 'Monitorim i zbatimit të punimeve në ndërtim për të garantuar standardet dhe cilësinë.',
+          href: '/sherbime/mbikeqyrje',
+          icon: 'i-lucide-eye'
         },
         {
-          name: 'Kolaudim',
-          description: 'Connect with third-party tools',
-          href: '#',
+          name: 'Kolaudim Veprash',
+          description: 'Certifikim dhe kolaudim ligjor i punimeve të zbatimit në ndërtim.',
+          href: '/sherbime/kolaudim',
           icon: 'i-lucide-clipboard-check'
         },
         {
-          name: 'Kontrolli i cilsisë',
-          description: 'Build strategic funnels that will convert',
-          href: '#',
-          icon: 'i-lucide-chart-line'
+          name: 'Efiçencë Energjetike',
+          description: 'Projektimi i impianteve për prodhimin e energjisë nga burime të rinovueshme.',
+          href: '/sherbime/eficence-energjetike',
+          icon: 'i-lucide-sun'
         }
       ]
     },
     {
-
       name: 'Projekte',
-      href: '/projekte',
-      children: [
-        {
-          name: 'Projektim Arkitektonik',
-          description: 'Get a better understanding of your traffic',
-          href: '#',
-          icon: 'i-lucide-building'
-        },
-        {
-          name: 'Projektim inxhinierik',
-          description: 'Speak directly to your customers',
-          href: '#',
-          icon: 'i-lucide-settings'
-        },
-        {
-          name: 'Mbikqyrje punimesh',
-          description: 'Your customers\' data will be safe and secure',
-          href: '#',
-          icon: 'i-lucide-shield-check'
-        },
-        {
-          name: 'Kolaudim',
-          description: 'Connect with third-party tools',
-          href: '#',
-          icon: 'i-lucide-clipboard-check'
-        },
-        {
-          name: 'Kontrolli i cilsisë',
-          description: 'Build strategic funnels that will convert',
-          href: '#',
-          icon: 'i-lucide-chart-line'
-        }
-      ]
+      href: '/projekte'
     },
-    { name: 'Kontakt', href: '/kontakt' }
+    {
+      name: 'Kontakt',
+      href: '/kontakt'
+    }
   ],
   [
     {
       avatar: {
         src: '/img/Logo_lead_l.svg',
-        alt: 'Logo Lead',
+        alt: 'Logo Lead Consulting',
         size: '2xl',
         loading: 'lazy',
-        class: 'rounded-none w-full h-8 '
+        class: 'rounded-none w-full h-8'
       },
       to: '/'
     }

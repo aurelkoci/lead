@@ -31,7 +31,7 @@ useSeoMeta({
       <LandingAbout :page="page" />
       <LandingWorkExperience :page />
     </UPageSection>
-    <LandingBlog :page />
+    <LandingProjekt :page />
     <LandingTestimonials :page />
     <LandingFAQ :page />
   </UPage>

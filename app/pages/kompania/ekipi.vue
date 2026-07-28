@@ -1,9 +1,9 @@
 <template>
   <div
-    class="w-screen h-screen bg-amber-500 flex items-center justify-center"
+    class="h-screen bg-amber-500 flex items-center justify-center"
   >
     <h1 class="pt-56 text-4xl font-bold">
-      projekte
+      Ekipi
     </h1>
   </div>
 </template>

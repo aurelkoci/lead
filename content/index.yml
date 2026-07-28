@@ -79,7 +79,7 @@ testimonials:
       avatar:
         src: '/images/avatars/patos-project.webp'
         srcset: '/images/avatars/patos-project.webp 2x'
-blog:
+projekte:
   title: "Lajme dhe Publikime"
   description: "Të rejat më të fundit nga kantieret dhe inovacionet inxhinierike."
 faq:

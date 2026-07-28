@@ -201,6 +201,7 @@
       </DialogPanel>
     </Dialog>
   </header>
+  <UBreadcrumb color="secondary" :items="navLinks" />
 </template>
 
 <script setup>
