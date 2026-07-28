@@ -1,9 +1,9 @@
 <template>
   <header
-    class="w-full max-w-(--ui-container) fixed top-2 sm:top-4 mx-auto left-1/2 transform -translate-x-1/2 z-10 bg-muted/80 backdrop-blur-sm rounded-full px-2 sm:px-4 border border-muted/50 shadow-lg shadow-neutral-950/5"
+    class="w-full max-w-(--ui-container) fixed top-2 sm:top-4 mx-auto left-1/2 transform -translate-x-1/2 z-20 bg-muted/80 backdrop-blur-sm rounded-full px-2 sm:px-4 border border-muted/50 shadow-lg shadow-neutral-950/5"
   >
     <nav
-      class="mx-auto flex items-center justify-between p-2 lg:px-8"
+      class="mx-auto flex items-center justify-between p-2 lg:px-8 z-50"
       aria-label="Global"
     >
       <div class="flex lg:flex-1">
@@ -168,7 +168,7 @@
       </DialogPanel>
     </Dialog>
     <UBreadcrumb
-      class="absolute top-20 sm:top-24 z-10"
+      class="absolute -bottom-16 sm:bottom-[-2rem] -z-0 bg-accented/20 backdrop-blur-sm px-2 sm:px-4"
       :items="breadcrumbItems"
     />
   </header>

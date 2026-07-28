@@ -91,9 +91,9 @@ export default defineContentConfig({
       schema: z.object({
         minRead: z.number(),
         date: z.date(),
-        image: z.array(z.string().nonempty().editor({ input: 'media' })),
+        image: z.string().nonempty().editor({ input: 'media' }),
         author: createAuthorSchema(),
-        kategori: z.array(z.string().nonempty())
+        kategori: z.array(z.string().nonempty()).optional()
       })
     }),
     pages: defineCollection({

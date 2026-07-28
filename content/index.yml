@@ -9,7 +9,7 @@ hero:
       to: projects
       color: "neutral"
   images:
-    - src: /foto/10webp
+    - src: /foto/10.webp
       alt: Projektim dhe infrastrukture urbane LEAD Consulting
     - src: /foto/11.webp
       alt: Mbikëqyrje e punimeve në kantier nga inxhinierët e LEAD
@@ -63,22 +63,22 @@ testimonials:
       name: 'Përfaqësues Zbatues'
       description: 'Projekti i Bazës Ajrore të NATO-s, Kuçovë'
       avatar:
-        src: '/images/avatars/nato-project.webp'
-        srcset: '/images/avatars/nato-project.webp 2x'
+        src: '/foto/19.webp'
+        srcset: '/foto/19.webp 2x'
   - quote: "Ekspertiza e LEAD në projektimin e parkut tonë fotovoltaik ishte jetësore. Ata nuk ofruan vetëm vizatime teknike, por një plan të plotë për efiçencën energjetike dhe përshtatjen me mjedisin lokal. Rekomandim maksimal për sektorin e energjisë së gjelbër."
     author:
       name: 'Investitor'
       description: 'Parku Fotovoltaik Spitallë Solar (100 MW)'
       avatar:
-        src: '/images/avatars/spitalla-solar.webp'
-        srcset: '/images/avatars/spitalla-solar.webp 2x'
+        src: '/foto/18.webp'
+        srcset: '/foto/18.webp 2x'
   - quote: "Ndërhyrjet urbanistike që realizoi LEAD Consulting në lagjen tonë zgjidhën problemet shumëvjeçare të infrastrukturës rrugore dhe atë të kanalizimeve. Vëmendja e tyre ndaj gjelbërimit dhe hapësirave rekreative i ka dhënë një frymë të re komunitetit."
     author:
       name: 'Përfaqësues Vendor'
       description: 'Projekti i Rikualifikimit Urban, Patos'
       avatar:
-        src: '/images/avatars/patos-project.webp'
-        srcset: '/images/avatars/patos-project.webp 2x'
+        src: '/foto/17.webp'
+        srcset: '/foto/17.webp 2x'
 projekte:
   title: "Lajme dhe Publikime"
   description: "Të rejat më të fundit nga kantieret dhe inovacionet inxhinierike."

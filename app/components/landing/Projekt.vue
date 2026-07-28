@@ -1,9 +1,22 @@
 <script setup lang="ts">
 import type { IndexCollectionItem } from '@nuxt/content'
 
-defineProps<{
-  page: IndexCollectionItem
+type ProjectSection = {
+  title?: string
+  description?: string
+}
+
+type IndexPageWithFallback = IndexCollectionItem & {
+  projekte?: ProjectSection
+}
+
+const props = defineProps<{
+  page?: IndexPageWithFallback
 }>()
+
+const section = computed<ProjectSection>(() => {
+  return props.page?.projekte || {}
+})
 
 const { data: posts } = await useAsyncData('index-projekte', () =>
   queryCollection('projekte').order('date', 'DESC').limit(3).all()
@@ -15,8 +28,8 @@ if (!posts.value) {
 
 <template>
   <UPageSection
-    :title="page.projekte.title"
-    :description="page.projekte.description"
+    :title="section.title || ''"
+    :description="section.description || ''"
     :ui="{
       container: 'px-0 pt-0! sm:gap-6 lg:gap-8',
       title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',

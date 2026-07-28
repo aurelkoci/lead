@@ -17,14 +17,12 @@ useSeoMeta({
   ogDescription: page.value?.seo?.description || page.value?.description,
   ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/portfolio-light.png'
 })
-
-console.log('page', page.value)
 </script>
 
 <template>
   <UPage v-if="page">
     <IndexCarousel :page="page" />
-    <LandingHero :page />
+    <LandingHero :page="page" />
     <UPageSection
       :ui="{
         container: 'pt-0! lg:grid lg:grid-cols-1 lg:gap-8'
@@ -33,6 +31,7 @@ console.log('page', page.value)
       <LandingAbout :page="page" />
       <LandingWorkExperience :page />
     </UPageSection>
+    <IndexLandingProjekt />
     <LandingProjekt :page />
     <LandingTestimonials :page />
     <LandingFAQ :page />
