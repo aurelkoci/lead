@@ -7,7 +7,9 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     'nuxt-og-image',
-    'motion-v/nuxt'
+    'motion-v/nuxt',
+    '@nuxtjs/seo',
+    'nuxt-skew-protection'
   ],
 
   devtools: {
@@ -38,7 +40,8 @@ export default defineNuxtConfig({
         '@headlessui/vue',
         '@heroicons/vue/24/outline',
         '@vue/devtools-core',
-        '@vue/devtools-kit'
+        '@vue/devtools-kit',
+        '@vue/devtools-core'
       ]
     }
   },
