@@ -5,7 +5,7 @@
     @mouseleave="open = false"
     @click="open = !open"
   >
-    <NuxtLink
+    <NuxtLinkLocale
       :to="item.to"
       :class="[
         open
@@ -13,7 +13,7 @@
           : 'group inline-flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 dark:text-white'
       ]"
     >
-      <span>{{ item.label }}</span>
+      <span>{{ t(item.label) }}</span>
       <UIcon
         name="i-lucide-chevron-down"
         :class="[
@@ -24,7 +24,7 @@
         ]"
         aria-hidden="true"
       />
-    </NuxtLink>
+    </NuxtLinkLocale>
     <div class="w-20 h-4 absolute" />
     <transition
       enter-active-class="transition ease-out duration-200"
@@ -57,15 +57,15 @@
                   />
                 </div>
                 <div>
-                  <NuxtLink
+                  <NuxtLinkLocale
                     :to="items.to"
                     class="font-semibold text-gray-900 dark:text-white"
                   >
-                    {{ items.label }}
+                    {{ t(items.label) }}
                     <span class="absolute inset-0" />
-                  </NuxtLink>
+                  </NuxtLinkLocale>
                   <p class="mt-1 text-gray-600 dark:text-gray-400">
-                    {{ items.description }}
+                    {{ t(items.description) }}
                   </p>
                 </div>
               </div>
@@ -84,6 +84,6 @@ defineProps({
     default: () => ({})
   }
 })
-
+const { t } = useI18n()
 const open = ref(false)
 </script>

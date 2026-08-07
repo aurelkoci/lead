@@ -3,10 +3,10 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:max-w-4xl">
         <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white">
-          From the blog
+          Projektet e fundit
         </h2>
         <p class="mt-2 text-lg/8 text-gray-600 dark:text-gray-400">
-          Learn how to grow your business with our expert advice.
+          Projektet më të fundit nga kompania jonë.
         </p>
         <div class="mt-16 space-y-20 lg:mt-20">
           <article

@@ -1,0 +1,112 @@
+seo:
+  title: "LEAD Consulting | Projektim, Mbikëqyrje dhe Kolaudim Inxhinierik"
+  description: "LEAD Consulting është kompani inxhinierike multidisiplinare në Shqipëri e specializuar në infrastrukturë, energji të rinovueshme, kolaudim dhe zhvillim urban."
+title: "Ne jemi LEAD Consulting"
+description: "Mirë se vini në LEAD Consulting. Ne udhëheqim zhvillimin e veprave publike dhe private duke ofruar zgjidhje të plota inxhinierike, mbikëqyrje rigoroze dhe kolaudim të standardeve më të larta teknike."
+hero:
+  links:
+    - label: "Shiko Projektet"
+      to: projects
+      color: "neutral"
+  images:
+    - src: /foto/10.webp
+      alt: Projektim dhe infrastrukture urbane LEAD Consulting
+    - src: /foto/11.webp
+      alt: Mbikëqyrje e punimeve në kantier nga inxhinierët e LEAD
+    - src: /foto/12.webp
+      alt: Parqe fotovoltaike dhe energji e rinovueshme në Shqipëri
+    - src: /foto/13.webp
+      alt: Kolaudim i objekteve me rëndësi strategjike
+    - src: /foto/14.webp
+      alt: Zhvillim i qëndrueshëm dhe arkitekturë peizazhi
+    - src: /foto/15.webp
+      alt: Projektimi i ballkoneve panoramike dhe turizmit natyror
+    - src: /foto/16.webp
+      alt: Rrjete inxhinierike, ujësjellës dhe kanalizime
+    - src: /foto/17.webp
+      alt: Ndërtimi i shkollave dhe rikualifikimi urban i lagjeve
+    - src: /foto/18.webp
+      alt: Konsulencë teknike për vepra civile dhe ushtarake
+
+about:
+  title: "Rreth LEAD Consulting"
+  description: |
+    LEAD Consulting është një entitet i profilizuar në inxhinieri, konsulencë teknike dhe zhvillim territorial. Të vepruarit si një palë e tretë e pavarur na lejon të garantojmë saktësi absolute në kolaudimin e projekteve dhe mbikëqyrjen e ndërtimit.
+    Qasja jonë integron rregulloret strikte teknike (KTP & KTZ) me inovacionin, duke u fokusuar veçanërisht në infrastrukturën publike, energjinë diellore dhe zgjidhjet e qëndrueshme urbane. Ne e transformojmë vizionin e klientëve në struktura të sigurta dhe afatgjata.
+experience:
+  title: Ekspertiza Inxhinierike
+  items:
+    - position: "Projektim & Konsulencë"
+      date: "2023 - Present"
+      company:
+        name: Impiante Fotovoltaike
+        logo: "i-lucide-solar-panel"
+        url: "/projects"
+        color: "#187A43"
+    - position: "Mbikëqyrje & Kolaudim"
+      date: "Vepra Civile dhe Strategjike"
+      company:
+        name: "Infrastrukturë & Institucione"
+        logo: "i-lucide-building"
+        url: "/projects"
+        color: "#334155"
+    - position: "Projektim dhe Planifikim"
+      date: "Rikualifikim i Hapësirave"
+      company:
+        name: "Infrastrukturë Urbane"
+        logo: "i-lucide-map"
+        url: "/projects"
+        color: "#283C33"
+testimonials:
+  - quote: "LEAD Consulting menaxhoi me sukses kolaudimin e një prej projekteve më komplekse strategjike në Shqipëri. Profesionalizmi i tyre, përpikmëria në zbatimin e rregulloreve teknike dhe qëndrimi i pavarur i bëjnë ata partnerin ideal për investime madhore."
+    author:
+      name: 'Përfaqësues Zbatues'
+      description: 'Projekti i Bazës Ajrore të NATO-s, Kuçovë'
+      avatar:
+        src: '/foto/19.webp'
+        srcset: '/foto/19.webp 2x'
+  - quote: "Ekspertiza e LEAD në projektimin e parkut tonë fotovoltaik ishte jetësore. Ata nuk ofruan vetëm vizatime teknike, por një plan të plotë për efiçencën energjetike dhe përshtatjen me mjedisin lokal. Rekomandim maksimal për sektorin e energjisë së gjelbër."
+    author:
+      name: 'Investitor'
+      description: 'Parku Fotovoltaik Spitallë Solar (100 MW)'
+      avatar:
+        src: '/foto/18.webp'
+        srcset: '/foto/18.webp 2x'
+  - quote: "Ndërhyrjet urbanistike që realizoi LEAD Consulting në lagjen tonë zgjidhën problemet shumëvjeçare të infrastrukturës rrugore dhe atë të kanalizimeve. Vëmendja e tyre ndaj gjelbërimit dhe hapësirave rekreative i ka dhënë një frymë të re komunitetit."
+    author:
+      name: 'Përfaqësues Vendor'
+      description: 'Projekti i Rikualifikimit Urban, Patos'
+      avatar:
+        src: '/foto/17.webp'
+        srcset: '/foto/17.webp 2x'
+projekte:
+  title: "Lajme dhe Publikime"
+  description: "Të rejat më të fundit nga kantieret dhe inovacionet inxhinierike."
+faq:
+  title: "Pyetjet më të Shpeshta (FAQ)"
+  description: "Informacione shtesë mbi procedurat, standardet dhe shërbimet e ofruara nga kompania jonë."
+  categories:
+    - title: Shërbimet dhe Ekspertiza
+      questions:
+        - label: Cilat janë shërbimet kryesore që ofroni?
+          content: |
+            LEAD Consulting ofron një paketë të plotë shërbimesh inxhinierike. Kjo përfshin: projektimin e infrastrukturës rrugore dhe urbane, inxhinieri për parqe fotovoltaike, mbikëqyrje rigoroze të kantiereve të ndërtimit, si dhe kolaudimin ligjor të veprave publike, ushtarake dhe atyre civile.
+        - label: A funksiononi ju si një palë e tretë e pavarur?
+          content: |
+            Po. Integriteti profesional është thelbi ynë. Në proceset e mbikëqyrjes dhe kolaudimit, ne veprojmë si një ent i pavarur, duke garantuar që çdo vepër zbatohet saktësisht sipas projekteve, standardeve të ndërtimit (KTP/KTZ) dhe specifikimeve të investitorit pa konflikt interesi.
+        - label: Në cilat fusha të inxhinierisë specializoheni më tepër?
+          content: |
+            Ekspertiza jonë kryesore shtrihet në zhvillimin e rrjeteve inxhinierike (MEPS, ujësjellës, kanalizime KUZ/KUSH), planifikimin urban për rikualifikime zonash, menaxhimin e aseteve ekoturistike dhe inxhinierinë mjedisore për prodhimin e energjisë së rinovueshme.
+    - title: Procedura dhe Kontraktimi
+      questions:
+        - label: Me çfarë lloj investitorësh bashkëpunoni?
+          content: |
+            Ne kemi një portofol të dëshmuar suksesi si me institucione ndërkombëtare (p.sh. NSPA/NATO), me autoritete shtetërore e bashki (për ndërtime shkollash dhe sheshesh), ashtu edhe me investitorë të mëdhenj privatë (për industri dhe impiante diellore).
+        - label: A merreni me projekte në të gjithë territorin e Shqipërisë?
+          content: |
+            Po, ashtu siç tregojnë projektet tona nga Përmeti në Spitallë (Durrës) e deri në Kuçovë, skuadra jonë ka kapacitetin logjistik dhe teknik për të dizenjuar, mbikëqyrur dhe operuar kantiere kudo në territorin e Republikës së Shqipërisë.
+    - title: Rreth Qasjes Sonë
+      questions:
+        - label: Çfarë nënkuptoni me "Zhvillim të Qëndrueshëm"?
+          content: |
+            Për ne, çdo ndërhyrje teknike duhet të respektojë komunitetin dhe natyrën. Kjo reflektohet në dizenjimin masiv të parqeve fotovoltaike për energji të pastër, si dhe në projektet turistike që mbrojnë trashëgiminë natyrore pa cenuar peizazhin ekzistues.

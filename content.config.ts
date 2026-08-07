@@ -1,5 +1,22 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 
+const createCategorySchema = () => z.object({
+  title: z.enum([
+    'arkitektonik',
+    'inxhinierike',
+    'arkitektur-publike',
+    'objekte-shendetsore',
+    'objekte-arsimore',
+    'objekte-industriale',
+    'landscape',
+    'hoteleri',
+    'infrastuktura',
+    'eficence-energjetike'
+  ]),
+  description: z.string().optional(),
+  slug: z.string().optional()
+})
+
 const createBaseSchema = () => z.object({
   title: z.string(),
   description: z.string()
@@ -36,9 +53,9 @@ const createTestimonialSchema = () => z.object({
 
 export default defineContentConfig({
   collections: {
-    index: defineCollection({
+    indexsq: defineCollection({
       type: 'page',
-      source: 'index.yml',
+      source: 'sq/index.yml',
       schema: z.object({
         hero: z.object({
           links: z.array(createButtonSchema()),
@@ -58,7 +75,7 @@ export default defineContentConfig({
           }))
         }),
         testimonials: z.array(createTestimonialSchema()),
-        projekte: createBaseSchema(),
+        projekte_sq: createBaseSchema(),
         faq: createBaseSchema().extend({
           categories: z.array(
             z.object({
@@ -73,57 +90,136 @@ export default defineContentConfig({
         })
       })
     }),
-    projects: defineCollection({
-      type: 'data',
-      source: 'projects/*.yml',
+    indexen: defineCollection({
+      type: 'page',
+      source: 'en/index.yml',
       schema: z.object({
-        title: z.string().nonempty(),
-        description: z.string().nonempty(),
-        image: z.string().nonempty().editor({ input: 'media' }),
-        url: z.string().nonempty(),
-        tags: z.array(z.string()),
-        date: z.date()
+        hero: z.object({
+          links: z.array(createButtonSchema()),
+          images: z.array(createImageSchema())
+        }),
+        about: createBaseSchema(),
+        experience: createBaseSchema().extend({
+          items: z.array(z.object({
+            date: z.date(),
+            position: z.string(),
+            company: z.object({
+              name: z.string(),
+              url: z.string(),
+              logo: z.string().editor({ input: 'icon' }),
+              color: z.string()
+            })
+          }))
+        }),
+        testimonials: z.array(createTestimonialSchema()),
+        projekte_en: createBaseSchema(),
+        faq: createBaseSchema().extend({
+          categories: z.array(
+            z.object({
+              title: z.string().nonempty(),
+              questions: z.array(
+                z.object({
+                  label: z.string().nonempty(),
+                  content: z.string().nonempty()
+                })
+              )
+            }))
+        })
+      })
+    }),
+    indexit: defineCollection({
+      type: 'page',
+      source: 'it/index.yml',
+      schema: z.object({
+        hero: z.object({
+          links: z.array(createButtonSchema()),
+          images: z.array(createImageSchema())
+        }),
+        about: createBaseSchema(),
+        experience: createBaseSchema().extend({
+          items: z.array(z.object({
+            date: z.date(),
+            position: z.string(),
+            company: z.object({
+              name: z.string(),
+              url: z.string(),
+              logo: z.string().editor({ input: 'icon' }),
+              color: z.string()
+            })
+          }))
+        }),
+        testimonials: z.array(createTestimonialSchema()),
+        projekte_it: createBaseSchema(),
+        faq: createBaseSchema().extend({
+          categories: z.array(
+            z.object({
+              title: z.string().nonempty(),
+              questions: z.array(
+                z.object({
+                  label: z.string().nonempty(),
+                  content: z.string().nonempty()
+                })
+              )
+            }))
+        })
       })
     }),
     projekte: defineCollection({
-      type: 'page',
-      source: 'projekte/*.md',
+      type: 'data',
+      source: [{ include: 'sq/projekte/*.yml' }, { include: 'en/projekte/*.yml' }, { include: 'it/projekte/*.yml' }],
       schema: z.object({
+        links: z.array(createButtonSchema()),
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
+        content: z.string().nonempty(),
+        slug: z.string().nonempty(),
         minRead: z.number(),
         date: z.date(),
         image: z.string().nonempty().editor({ input: 'media' }),
         author: createAuthorSchema(),
-        kategori: z.array(z.string().nonempty()).optional()
+        kategori: createCategorySchema()
       })
     }),
-    pages: defineCollection({
+    pagessq: defineCollection({
       type: 'page',
-      source: [
-        { include: 'projects.yml' },
-        { include: 'projekte.yml' },
-        { include: 'sherbime.yml' }
-      ],
+      source: 'sq/projekte.yml',
       schema: z.object({
         links: z.array(createButtonSchema())
       })
     }),
-    speaking: defineCollection({
+    pagesen: defineCollection({
       type: 'page',
-      source: 'speaking.yml',
+      source: 'en/projekte.yml',
       schema: z.object({
-        links: z.array(createButtonSchema()),
-        events: z.array(z.object({
-          category: z.enum(['Live talk', 'Podcast', 'Conference']),
-          title: z.string(),
-          date: z.date(),
-          location: z.string(),
-          url: z.string().optional()
-        }))
+        links: z.array(createButtonSchema())
       })
     }),
-    about: defineCollection({
+    pagesit: defineCollection({
       type: 'page',
-      source: 'about.yml',
+      source: 'it/projekte.yml',
+      schema: z.object({
+        links: z.array(createButtonSchema())
+      })
+    }),
+    aboutsq: defineCollection({
+      type: 'page',
+      source: 'sq/about.yml',
+      schema: z.object({
+        content: z.object({}),
+        images: z.array(createImageSchema())
+      })
+    }),
+    abouten: defineCollection({
+      type: 'page',
+      source: 'en/about.yml',
+      schema: z.object({
+        content: z.object({}),
+        images: z.array(createImageSchema())
+      })
+    }),
+    aboutit: defineCollection({
+      type: 'page',
+      source: 'it/about.yml',
       schema: z.object({
         content: z.object({}),
         images: z.array(createImageSchema())

@@ -60,10 +60,8 @@ const accept = () => {
 
 <template>
   <div>
-    <UContainer class="sm:border-x border-default pt-10">
-      <AppNavbarConctrained />
-      <slot />
-    </UContainer>
+    <AppNavbarConctrained />
+    <slot />
     <AppFooter />
   </div>
 </template>

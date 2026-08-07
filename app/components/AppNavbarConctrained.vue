@@ -7,22 +7,22 @@
       aria-label="Global"
     >
       <div class="flex lg:flex-1">
-        <NuxtLink
+        <NuxtLinkLocale
           to="/"
           class="-m-1.5 p-1.5"
         >
           <span class="sr-only">Lead</span>
           <img
             class="h-8 w-auto dark:hidden"
-            src="/img/Logo_lead_l.svg"
+            src="/img/Logo_lead_D-v2.svg"
             alt=""
           >
           <img
             class="h-8 w-auto not-dark:hidden"
-            src="/img/Logo_lead_D.svg"
+            src="/img/Logo_lead_l-v2.svg"
             alt=""
           >
-        </NuxtLink>
+        </NuxtLinkLocale>
       </div>
       <div class="flex lg:hidden">
         <button
@@ -40,16 +40,17 @@
       <div class="hidden lg:flex lg:gap-x-12">
         <ul class="flex gap-x-6 text-sm/6 font-semibold leading-6 text-gray-900 dark:text-white">
           <template
-            v-for="item in navLinks[0]"
+            v-for="item in localeNavLinks"
             :key="item.label"
           >
             <li>
-              <NuxtLink
+              <NuxtLinkLocale
                 v-if="!item.children"
                 :to="item.to"
                 class="text-sm/6 font-semibold text-gray-900 transition-colors hover:text-[#187A43] dark:text-white dark:hover:text-[#187A43]"
               >
-                {{ item.label }}</NuxtLink>
+                {{ item.label }}
+              </NuxtLinkLocale>
               <AppNavbarPopover
                 v-else
                 :item="item"
@@ -59,6 +60,7 @@
         </ul>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <AppLocale />
         <ColorModeButton class="justify-self-end" />
       </div>
     </nav>
@@ -73,7 +75,7 @@
         class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:bg-gray-900 dark:sm:ring-gray-100/10"
       >
         <div class="flex items-center justify-between">
-          <NuxtLink
+          <NuxtLinkLocale
             to="/"
             class="-m-1.5 p-1.5"
             @click="mobileMenuOpen = false"
@@ -81,17 +83,18 @@
             <span class="sr-only">Lead</span>
             <img
               class="h-8 w-auto dark:hidden"
-              src="/img/Logo_lead_l.svg"
+              src="/img/Logo_lead_D-v2.svg"
               alt=""
             >
             <img
               class="h-8 w-auto not-dark:hidden"
-              src="/img/Logo_lead_D.svg"
+              src="/img/Logo_lead_l-v2.svg"
               alt=""
             >
-          </NuxtLink>
+          </NuxtLinkLocale>
 
           <div class="flex items-center gap-1">
+            <AppLocale />
             <ColorModeButton />
             <button
               type="button"
@@ -111,17 +114,17 @@
           <div class="-my-6 divide-y divide-gray-500/10 dark:divide-white/10">
             <div class="space-y-2 py-6">
               <template
-                v-for="item in navLinks[0]"
+                v-for="item in localeNavLinks"
                 :key="item.label"
               >
-                <NuxtLink
+                <NuxtLinkLocale
                   v-if="!item.children"
                   :to="item.to"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 transition-colors hover:bg-[#187A43]/10 hover:text-[#187A43] dark:text-white dark:hover:bg-[#187A43]/20 dark:hover:text-[#187A43]"
                   @click="mobileMenuOpen = false"
                 >
                   {{ item.label }}
-                </NuxtLink>
+                </NuxtLinkLocale>
 
                 <Disclosure
                   v-else
@@ -141,7 +144,7 @@
                   </DisclosureButton>
 
                   <DisclosurePanel class="mt-1 space-y-1 pl-3">
-                    <NuxtLink
+                    <NuxtLinkLocale
                       v-for="child in item.children"
                       :key="child.label"
                       :to="child.to"
@@ -158,7 +161,7 @@
                           {{ child.label }}
                         </p>
                       </div>
-                    </NuxtLink>
+                    </NuxtLinkLocale>
                   </DisclosurePanel>
                 </Disclosure>
               </template>
@@ -168,17 +171,42 @@
       </DialogPanel>
     </Dialog>
     <UBreadcrumb
-      class="absolute -bottom-16 sm:bottom-[-2rem] -z-0 bg-accented/20 backdrop-blur-sm px-2 sm:px-4"
+      class="absolute -bottom-16 sm:-bottom-8 z-0 bg-accented/20 backdrop-blur-sm px-2 sm:px-4"
       :items="breadcrumbItems"
     />
   </header>
 </template>
 
-<script setup>
-import { ref } from 'vue'
+<script setup lang="ts">
+import { computed, ref } from 'vue'
 import { Dialog, DialogPanel, Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
+import { navLinks } from '~/utils/links'
 
+type NavChildItem = {
+  label: string
+  to: string
+  icon?: string
+  description?: string
+}
+
+type NavItem = {
+  label: string
+  to: string
+  children?: NavChildItem[]
+}
+
+type LocalizedNavSection = {
+  locale: string
+  items: NavItem[]
+}
+
+const { locale } = useI18n()
+const localeNavLinks = computed<NavItem[]>(() => {
+  const localizedSections = navLinks[0] as LocalizedNavSection[] | undefined
+  const localizedMenu = localizedSections?.find(item => item.locale === locale.value)
+  return localizedMenu?.items || []
+})
 const mobileMenuOpen = ref(false)
 const breadcrumbItems = useBreadcrumbItems()
 </script>

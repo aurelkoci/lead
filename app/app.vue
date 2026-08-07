@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import * as locales from '@nuxt/ui/locale'
+
+const { locale } = useI18n()
 const colorMode = useColorMode()
 
 const color = computed(() => colorMode.value === 'dark' ? '#020618' : 'white')
@@ -42,7 +45,7 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
 </script>
 
 <template>
-  <UApp>
+  <UApp :locale="locales[locale]">
     <NuxtLayout>
       <UMain class="relative">
         <NuxtPage />

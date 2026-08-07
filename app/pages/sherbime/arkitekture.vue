@@ -1,4 +1,23 @@
 <script setup lang="ts">
+import type { Collections, PagesenCollectionItem, PagessqCollectionItem, PagesitCollectionItem } from '@nuxt/content'
+
+const { locale } = useI18n()
+
+const { data: page } = await useAsyncData('projekte-page' + locale.value, async () => {
+  const collection = ('pages' + locale.value) as keyof Collections
+  const content = await queryCollection(collection).first() as PagesenCollectionItem | PagessqCollectionItem | PagesitCollectionItem | null
+  if (!content && locale.value !== 'en') {
+    return await queryCollection('pagessq').first()
+  }
+  return content
+})
+if (!page.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Page not found',
+    fatal: true
+  })
+}
 const subServices = [
   {
     title: 'Planifikim & Rikualifikim Urban',
@@ -20,6 +39,16 @@ const subServices = [
 
 <template>
   <UContainer class="py-12 lg:py-16">
+    <UPageHero
+      :title="page.title"
+      :description="page.description"
+      :links="page.links"
+      :ui="{
+        title: 'mx-0! text-left',
+        description: 'mx-0! text-left',
+        links: 'justify-start'
+      }"
+    />
     <header class="max-w-4xl">
       <h1 class="text-3xl font-semibold tracking-tight text-highlighted sm:text-4xl lg:text-5xl">
         Projektim Arkitektonik & Urbanistik

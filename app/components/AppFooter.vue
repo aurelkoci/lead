@@ -11,12 +11,12 @@
             <span class="sr-only">LEAD Consulting</span>
             <img
               class="h-8 w-auto dark:hidden"
-              src="/img/Logo_lead_l.svg"
+              src="/img/Logo_lead_D-v2.svg"
               alt="LEAD Consulting Logo"
             >
             <img
               class="h-8 w-auto hidden dark:block"
-              src="/img/Logo_lead_D.svg"
+              src="/img/Logo_lead_l-v2.svg"
               alt="LEAD Consulting Logo"
             >
           </NuxtLink>

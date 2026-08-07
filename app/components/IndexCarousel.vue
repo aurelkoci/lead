@@ -9,9 +9,10 @@ const items = carousel.items
     loop
     :autoplay="{ delay: 3000 }"
     :items="items"
-    class="absolute w-full mx-auto rounded-lg shadow-lg shadow-accented/10 "
+    :ui="{ container: 'h-screen' }"
+    class="absolute w-full h-10/12 mx-auto rounded-lg shadow-lg shadow-accented/10 overflow-hidden"
   >
-    <div class="relative w-full h-full">
+    <div class=" w-full h-full relative rounded-lg overflow-hidden">
       <img
         :src="item"
         width="640"
