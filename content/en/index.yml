@@ -29,7 +29,7 @@ hero:
       alt: Konsulencë teknike për vepra civile dhe ushtarake
 
 about:
-  title: "Rreth LEAD Consulting"
+  title: "About LEAD Consulting"
   description: |
     LEAD Consulting është një entitet i profilizuar në inxhinieri, konsulencë teknike dhe zhvillim territorial. Të vepruarit si një palë e tretë e pavarur na lejon të garantojmë saktësi absolute në kolaudimin e projekteve dhe mbikëqyrjen e ndërtimit.
     Qasja jonë integron rregulloret strikte teknike (KTP & KTZ) me inovacionin, duke u fokusuar veçanërisht në infrastrukturën publike, energjinë diellore dhe zgjidhjet e qëndrueshme urbane. Ne e transformojmë vizionin e klientëve në struktura të sigurta dhe afatgjata.
@@ -41,21 +41,21 @@ experience:
       company:
         name: Impiante Fotovoltaike
         logo: "i-lucide-solar-panel"
-        url: "/projects"
+        url: "/en/projects"
         color: "#187A43"
     - position: "Mbikëqyrje & Kolaudim"
       date: "Vepra Civile dhe Strategjike"
       company:
         name: "Infrastrukturë & Institucione"
         logo: "i-lucide-building"
-        url: "/projects"
+        url: "/en/projects"
         color: "#334155"
     - position: "Projektim dhe Planifikim"
       date: "Rikualifikim i Hapësirave"
       company:
         name: "Infrastrukturë Urbane"
         logo: "i-lucide-map"
-        url: "/projects"
+        url: "/en/projects"
         color: "#283C33"
 testimonials:
   - quote: "LEAD Consulting menaxhoi me sukses kolaudimin e një prej projekteve më komplekse strategjike në Shqipëri. Profesionalizmi i tyre, përpikmëria në zbatimin e rregulloreve teknike dhe qëndrimi i pavarur i bëjnë ata partnerin ideal për investime madhore."

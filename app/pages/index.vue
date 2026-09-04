@@ -2,6 +2,10 @@
 // import { withLeadingSlash } from 'ufo'
 import type { Collections, IndexsqCollectionItem, IndexenCollectionItem, IndexitCollectionItem } from '@nuxt/content'
 
+const config = useRuntimeConfig()
+
+const { data: seo, pending } = await useFetch(`${config.public.apiBase}/api/page`)
+
 // const route = useRoute()
 const { locale } = useI18n()
 // const slug = computed(() => Array.isArray(route.params.slug) ? withLeadingSlash(String(route.params.slug.join('/'))) : withLeadingSlash(String(route.params.slug)))
@@ -22,9 +26,6 @@ const { data: page } = await useAsyncData('index' + locale.value, async () => {
   watch: [locale] // Refetch when locale changes
 })
 
-// const { data: page } = await useAsyncData('index', () => {
-//   return queryCollection('index').first()
-// })
 if (!page.value) {
   throw createError({
     statusCode: 404,
@@ -32,13 +33,15 @@ if (!page.value) {
     fatal: true
   })
 }
+const titleSeo = computed(() => seo.value?.pages.title)
+const ogDescription = computed(() => seo.value?.pages?.ogDescription)
 
 useSeoMeta({
-  title: page.value?.seo?.title || page.value?.title,
-  ogTitle: page.value?.seo?.title || page.value?.title,
-  description: page.value?.seo?.description || page.value?.description,
-  ogDescription: page.value?.seo?.description || page.value?.description,
-  ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/portfolio-light.png'
+  title: titleSeo.value,
+  ogTitle: titleSeo.value,
+  description: () => seo.value?.description,
+  ogDescription: () => ogDescription.value,
+  ogImage: () => seo.value?.image
 })
 </script>
 

@@ -1,2 +1,30 @@
 {
+  // Enable auto-insertion of .value for Vue refs
+  "vue.autoInsert.dotValue": true,
+
+  // Setup ESLint to format files automatically on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.classAttributes": ["class", "ui"],
+  //   "tailwindCSS.experimental.classRegex": [
+  //     ["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  //   ],
+  "tailwindCSS.classFunctions": ["defineAppConfig"],
+  "editor.wordWrap": "on",
+  "eslint.useFlatConfig": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

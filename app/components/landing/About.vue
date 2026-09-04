@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { IndexCollectionItem } from '@nuxt/content'
+import type { IndexsqCollectionItem, IndexenCollectionItem, IndexitCollectionItem } from '@nuxt/content'
 
 defineProps<{
-  page: IndexCollectionItem
+  page: IndexsqCollectionItem | IndexenCollectionItem | IndexitCollectionItem
 }>()
 </script>
 
@@ -11,7 +11,7 @@ defineProps<{
     :title="page.about.title"
     :description="page.about.description"
     :ui="{
-      container: 'p-0!',
+      container: 'p-0! mt-20',
       title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
       description: 'text-left mt-3 text-sm sm:text-md lg:text-sm text-muted'
     }"

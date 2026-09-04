@@ -36,10 +36,10 @@ defineOgImage('Portfolio', { title, description })
             Kompania
           </p>
           <h1 class="text-4xl font-semibold tracking-tight text-highlighted sm:text-5xl">
-            Rreth LEAD Consulting
+            {{ $t('Rreth LEAD Consulting') }}
           </h1>
           <p class="text-lg leading-8 text-toned">
-            Një palë e tretë e pavarur dhe e besueshme në inxhinieri dhe zhvillim.
+            {{ $t('Një palë e tretë e pavarur dhe e besueshme në inxhinieri dhe zhvillim.') }}
           </p>
         </div>
       </section>
@@ -47,7 +47,7 @@ defineOgImage('Portfolio', { title, description })
       <section class="grid gap-8 py-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-stretch">
         <article class="space-y-6 text-base leading-8 text-toned">
           <h2 class="text-2xl font-semibold tracking-tight text-highlighted">
-            Zgjidhje të plota nga koncepti deri te dorëzimi
+            {{ $t('Zgjidhje të plota nga koncepti deri te dorëzimi') }}
           </h2>
           <p>
             LEAD Consulting ofron shërbime të integruara që mbulojnë të gjithë ciklin e zhvillimit të një projekti: nga projektimi arkitektonik dhe planifikimi urban, te koordinimi i disiplinave inxhinierike, mbikëqyrja rigoroze e punimeve dhe kolaudimi ligjor i veprave.

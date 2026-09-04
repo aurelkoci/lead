@@ -2,6 +2,7 @@
 import type { Collections, PagesenCollectionItem, PagessqCollectionItem, PagesitCollectionItem } from '@nuxt/content'
 
 const { locale } = useI18n()
+const localePath = useLocalePath()
 
 const { data: page } = await useAsyncData('projekte-page' + locale.value, async () => {
   const collection = ('pages' + locale.value) as keyof Collections
@@ -18,14 +19,14 @@ if (!page.value) {
     fatal: true
   })
 }
-const { data: data } = await useAsyncData('projekte', async () => {
-  const projekte = await queryCollection('projekte').path('en/projekte/*.yml').order('id', 'DESC').all()
-  return projekte
+const { data: projekte } = await useAsyncData('projekte' + locale.value, () => {
+  return queryCollection(('projekte' + locale.value) as keyof Collections).order('id', 'DESC').all()
 })
 
-console.log('locale.value is', locale.value)
-console.log('projekte', data.value)
-if (!data.value) {
+console.log('locale.value is', 'projekte' + locale.value)
+console.log('page', page.value)
+console.log('projekte', projekte.value)
+if (!projekte.value) {
   throw createError({
     statusCode: 406,
     statusMessage: 'projekti nuk u gjet',
@@ -44,6 +45,11 @@ useSeoMeta({
 })
 
 defineOgImage('Portfolio', { title, description })
+
+const projectLink = (path: string) => {
+  const slug = path.split('/').at(-1)
+  return localePath({ name: 'projekte-slug', params: { slug } })
+}
 </script>
 
 <template>
@@ -53,9 +59,8 @@ defineOgImage('Portfolio', { title, description })
       :description="page.description"
       :links="page.links"
       :ui="{
-        title: 'mx-0! text-left',
-        description: 'mx-0! text-left',
-        links: 'justify-start'
+        root: 'relative left-1/2 w-screen -translate-x-1/2',
+        container: 'w-full max-w-none px-4 sm:px-6 lg:px-8'
       }"
     />
     <UPageSection
@@ -65,17 +70,17 @@ defineOgImage('Portfolio', { title, description })
     >
       <UBlogPosts orientation="vertical">
         <Motion
-          v-for="(post, index) in data"
+          v-for="(post, index) in projekte"
           :key="index"
           :initial="{ opacity: 0, transform: 'translateY(10px)' }"
           :while-in-view="{ opacity: 1, transform: 'translateY(0)' }"
           :transition="{ delay: 0.2 * index }"
           :in-view-options="{ once: true }"
         >
-          <!-- <UBlogPost
+          <UBlogPost
             variant="naked"
             orientation="horizontal"
-            :to="post.path"
+            :to="projectLink(post.path)"
             v-bind="post"
             :ui="{
               root: 'md:grid md:grid-cols-2 group overflow-visible transition-all duration-300',
@@ -86,7 +91,7 @@ defineOgImage('Portfolio', { title, description })
                   ? 'sm:-rotate-1 overflow-visible'
                   : 'sm:rotate-1 overflow-visible'
             }"
-          /> -->
+          />
         </Motion>
       </UBlogPosts>
     </UPageSection>

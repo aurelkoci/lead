@@ -20,11 +20,11 @@ useHead({
   }
 })
 
-useSeoMeta({
-  titleTemplate: '%s - Kreu',
-  twitterCard: 'summary_large_image'
-})
-
+// useSeoMeta({
+//   titleTemplate: '%s - Kreu',
+//   twitterCard: 'summary_large_image'
+// })
+// TODO: Implement dynamic SEO meta based on fetched navigation and files data
 const [{ data: navigation }, { data: files }] = await Promise.all([
   useAsyncData('navigation', () => {
     return Promise.all([

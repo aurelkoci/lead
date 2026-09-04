@@ -41,21 +41,21 @@ experience:
       company:
         name: Impiante Fotovoltaike
         logo: "i-lucide-solar-panel"
-        url: "/projects"
+        url: "/projekte"
         color: "#187A43"
     - position: "Mbikëqyrje & Kolaudim"
       date: "Vepra Civile dhe Strategjike"
       company:
         name: "Infrastrukturë & Institucione"
         logo: "i-lucide-building"
-        url: "/projects"
+        url: "/projekte"
         color: "#334155"
     - position: "Projektim dhe Planifikim"
       date: "Rikualifikim i Hapësirave"
       company:
         name: "Infrastrukturë Urbane"
         logo: "i-lucide-map"
-        url: "/projects"
+        url: "/projekte"
         color: "#283C33"
 testimonials:
   - quote: "LEAD Consulting menaxhoi me sukses kolaudimin e një prej projekteve më komplekse strategjike në Shqipëri. Profesionalizmi i tyre, përpikmëria në zbatimin e rregulloreve teknike dhe qëndrimi i pavarur i bëjnë ata partnerin ideal për investime madhore."
